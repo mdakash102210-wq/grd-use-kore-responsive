@@ -1,0 +1,55 @@
+.container > * {
+  padding: 25px;
+  border: 2px solid gold;
+  background-color: antiquewhite;
+  text-transform: capitalize;
+}
+header {
+  grid-area: header;
+}
+nav {
+  grid-area: navaria;
+}
+main {
+  grid-area: mainaria;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.airticle {
+  grid-area: airticle;
+}
+
+footer {
+  grid-area: footeraria;
+}
+
+.container {
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+    "header header header header"
+    "navaria mainaria mainaria sidebar"
+    "navaria mainaria mainaria airticle"
+    "footeraria footeraria footeraria footeraria";
+}
+@media screen and (max-width: 576px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "navaria"
+      "mainaria"
+      "sidebar"
+      "airticle"
+      "footeraria";
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .container {
+    grid-template-areas:
+      "header header header"
+      "navaria navaria navaria "
+      "sidebar mainaria mainaria"
+      "airticle footeraria footeraria ";
+  }
+}
